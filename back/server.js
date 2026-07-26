@@ -10,6 +10,10 @@ const timeData = require("./timeIdextractor");
 const timevalue = require("./totalTime");
 
 
+
+app.get("/",(req,res)=>{
+    res.send("server started")
+})
 app.post("/editedplayslt", async (req, res) => {
     const data = req.body.array
     const timeDataid = await timeData(data);
