@@ -1,4 +1,3 @@
-const data = require("./timeIdextractor");
 
 function toSeconds(duration) {
     let second = 0
