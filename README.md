@@ -428,7 +428,6 @@ See the [`LICENSE`](./LICENSE) file for more information.
 
 **Debabrata Paul**
 
-**Thank You**
 GitHub: https://github.com/iamhacker2k24
 
 ---
