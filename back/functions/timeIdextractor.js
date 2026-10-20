@@ -26,7 +26,7 @@ const timeData = async (data) => {
     }
 
     // console.log(arr)
-  
+
     return arr;
 
 

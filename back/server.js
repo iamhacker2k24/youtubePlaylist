@@ -4,14 +4,14 @@ require('dotenv').config()
 const cors = require('cors')
 app.use(cors()) //allowing all regison future it need to be mast chanegs 
 app.use(express.json())
-const getAllid = require("./idExtracter");
-const getData = require("./idExtracter");
-const timeData = require("./timeIdextractor");
-const timevalue = require("./totalTime");
+const getAllid = require("./functions/idExtracter");
+const getData = require("./functions/idExtracter");
+const timeData = require("./functions/timeIdextractor");
+const timevalue = require("./functions/totalTime");
 
 
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send("server started")
 })
 app.post("/editedplayslt", async (req, res) => {
@@ -30,7 +30,7 @@ app.post('/', async (req, res) => {
     if (req.body.full_playlist) {
         console.log(req.body.youtube_url)
         const data = await getData(list_id)
-    
+
         const timeDataid = await timeData(data);
         const totaltime = await timevalue(timeDataid)
         res.send(totaltime)
